@@ -11,9 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=David+Libre&display=swap" rel="stylesheet">
-  
   <style>
-    
     *{
   padding: 0px;
   margin: 0px;
@@ -50,7 +48,7 @@
 
 .backimg h3{
   font-family: 'Merriweather', serif;
-  color: black;
+  color: #d2f3f9;
 }
 body{
   background-color:white;
@@ -69,54 +67,49 @@ body{
 }
 
 .btn1{
-  margin-top: 10px;
+  margin-top: 14px;
   margin: 4px;
-  padding: 10px;
+  padding: 6px 10px;
   font-weight: bold;
-  font-size: 14px;
-  background:rgb(1,1,1,0.9);
+  font-size: 18px;
   color: black;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-bottom: 30px;
-  margin-left: 40px;
   transition: .3s linear;
-  background-color: #48dbfb;
-    border:1px solid #48dbfb;
-    outline: none;
+  background-color: white;
+  border:1px solid white;
+  outline: none;
 }
 
   .btn1:hover{
-  color: #48dbfb;
-  background:black;
-  border:1px solid black;
+  color: white;
+  background:transparent;
   outline: none;
 }
 
 .btn2{
-  margin-top: 10px;
+  margin-top: 14px;
   margin: 4px;
-  padding: 10px;
+  padding: 6px 10px;
   font-weight: bold;
-  font-size: 14px;
-  background:rgb(1,1,1,0.9);
+  font-size: 18px;
   color: white;
-  border-radius: 4px;
+  border-radius: 2px;
   margin-bottom: 30px;
   transition: .3s linear;
-  color: #48dbfb;
-    border:1px solid black;
-    outline: none;
+  background-color: transparent;
+  border:1px solid white;
+  outline: none;
 }
 
   .btn2:hover{
   color: black;
-    background:#48dbfb;
-      border:1px solid #48dbfb;
-      outline: none;
+  background:white;
+  outline: none;
 }
 
 .container1{
-  background-image: url('https://images.pexels.com/photos/4260323/pexels-photo-4260323.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+  background-image: url('https://images.unsplash.com/photo-1522661067900-ab829854a57f?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80');
   justify-content: center;
   align-items: center;
   display: flex;
@@ -124,6 +117,7 @@ body{
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover; 
+  background-position: center;
 }
 
 .title{
@@ -151,7 +145,19 @@ body{
   font-weight: 400;
   font-family: 'David Libre', serif;
 }
+.aboutfont h4{
+ font-family: 'Merriweather', serif;
+}
 
+.aboutfont p{
+   font-family: 'David Libre', serif;
+}
+.aboutimg{
+  width: 250px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
 .indeximg{
   height: 150px;
   width: 150px;
@@ -329,7 +335,7 @@ input{
 
 <!--next--> 
 
-<div class="container-fluid Home" >
+<div class="Home" >
   <h1 class="title"> About</h1>
   <div class="row">
  <div class="col-md-4 col-lg-4 mx-auto">
@@ -341,6 +347,30 @@ input{
     </div>
     
     </div>
+
+ <div class="row pt-5">
+
+          <div class="col-10 col-lg-3 col-md-3  mx-auto pt-4  text-center  aboutfont" >
+           <img class="aboutimg pb-4" src="https://www.teachersconnect.com/wp-content/uploads/2020/01/banner-solutions.png">
+           <h4>Find solutions to your problems.</h4>
+           <p>Search years of topics, conversations, and problem-solving from a diverse community of teachers. Ask your questions publicly, privately, or even anonymously. We have teachers standing by to help you.</p>
+          </div>
+
+          <div class="col-10 col-lg-3 col-md-3 mx-auto pt-4  text-center  aboutfont">
+           <img class="aboutimg pb-4" src="https://www.teachersconnect.com/wp-content/uploads/2020/01/banner-people.png">
+           <h4>Connect with people who matter.</h4>
+           <p>Find people you already know and trust. Connect with new people using community groups and member profiles. Reach out to others, individually or in small groups, using our private messaging system.</p>
+          </div>
+           
+          <div class="col-10 col-lg-3 col-md-3  mx-auto pt-4   text-center  aboutfont">
+          <img class="aboutimg pb-4" src="https://www.teachersconnect.com/wp-content/uploads/2020/01/banner-reach.png">
+             <h4>Stay informed and educated.</h4>
+           <p>Get notified when someone connects with you or responds to your contributions. Stay updated on people and topics you follow. See the latest trends and discussions within the community. Continue to invest in your professional growth.</p>
+          </div>
+        </div>
+
+
+
   </div>
 
   
@@ -396,10 +426,11 @@ an era of education in his reign.
 </div>
 </div>
 
-<section id="Bussiness" class="py-5 Services">
-       <div class="container pt-5">
+<section  class="py-5">
+  <h1 class="title">Features</h1>
+       <div class="container">
 
-        <div class="row pt-5">
+        <div class="row">
 
           <div class="col-10 col-lg-4 col-md-4 my-2 mx-auto pt-4 ">
             <div class="box" align="center"><i class="fa fa-thumbs-up eicon"></i></div>
@@ -412,12 +443,48 @@ an era of education in his reign.
 
           </div>
 
-          <div class="col-10 col-lg-4 col-md-4 my-2 mx-auto pt-4  ">
+          <div class="col-8 col-lg-4 col-md-4 my-2 mx-auto pt-4  ">
             <div class="box" align="center"><i class="fa fa-ban eicon" aria-hidden="true"></i></div>
             <h5 class="line">No Adverts or Trolls</h5>  
           </div>
         </div>
 
+         <div class="row pt-4">
+
+          <div class="col-8 col-lg-3  col-md-4  mx-auto pt-4 ">
+            <div class="card">
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1583440532242-d83a45ca2b4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="height: 200px; ">
+  <div class="card-body text-center">
+    <h4>Rahul Meena</h4>
+    <p class="card-text">Being associated for a long time, he has helped many teachers to get their recognition in their locations.
+</p>
+  </div>
+</div>
+          </div>
+
+          <div class="col-8 col-lg-3 col-md-4   mx-auto pt-4 ">
+            <div class="card" >
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1544168190-79c17527004f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="height: 200px; ">
+  <div class="card-body text-center">
+    <h4>Nitesh</h4>
+    <p class="card-text">Experienced faculty who had trained plethora of young budding teachers and have transformed an era of education in his reign.</p>
+  </div>
+</div>
+
+          </div>
+
+          <div class="col-8 col-lg-3  col-md-4  mx-auto pt-4  ">
+           <div class="card" >
+  <img class="card-img-top" src="https://images.unsplash.com/photo-1561677843-39dee7a319ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap" style="height: 200px; ">
+  <div class="card-body text-center">
+    <h4>Vishesh Sagar</h4>
+    <p class="card-text">Experienced faculty who had trained plethora of young budding teachers and have transformed an era of education in his reign.</p>
+  </div>
+</div>
+          </div>
+        </div>
+
+       
         </div>
        </section>
 
@@ -464,4 +531,3 @@ an era of education in his reign.
 
 </body>
 </html> 
-
