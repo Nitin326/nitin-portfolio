@@ -1,1 +1,951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY WEB</title>
+    <link rel="stylesheet" href="nav.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Monoton&family=Roboto:wght@700&display=swap" rel="stylesheet">
+  
+<link  href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
+  
+  <style>
+    
+    
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
+html{
+  scroll-behavior: smooth;
+}
+/* custom scroll bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+.content{
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar1{
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  transition: all 0.3s ease;
+}
+.navbar1.sticky{
+  background: #1b1b1b;
+  padding: 10px 0;
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
+}
+.navbar1 .content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar1 .logo a{
+  color: #fff;
+  font-size: 30px;
+  text-decoration: none;
+  font-family: 'Monoton', cursive;
+}
+.navbar1 .menu-list{
+  display: inline-flex;
+  padding-top: 8px;
+}
+.menu-list li{
+  list-style: none;
+}
+.menu-list li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.menu-list li a:hover{
+  color:#48dbfb ;
+}
+.banner{
+  background: url("https://wallpapercave.com/wp/OryYmio.jpg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.about{
+  padding: 30px 0;
+}
+.about .title{
+  font-size: 38px;
+  font-weight: 700;
+}
+.about p{
+  padding-top: 20px;
+  text-align: justify;
+}
+.icon{
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+.menu-list .cancel-btn{
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+@media (max-width: 1230px) {
+  .content{
+    padding: 0 60px;
+  }
+}
+@media (max-width: 1100px) {
+  .content{
+    padding: 0 40px;
+  }
+}
+@media (max-width: 900px) {
+  .content{
+    padding: 0 30px;
+  }
+}
+@media (max-width: 868px) {
+  body.disabled{
+    overflow: hidden;
+  }
+  .icon{
+    display: block;
+  }
+  .icon.hide{
+    display: none;
+  }
+  .navbar1 .menu-list{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #222;
+    transition: all 0.3s ease;
+  }
+  .navbar1.show .menu-list{
+    left: 0%;
+  }
+  .navbar1 .menu-list li{
+    margin-top: 45px;
+  }
+  .navbar1 .menu-list li a{
+    font-size: 23px;
+    margin-left: -100%;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar1.show .menu-list li a{
+    margin-left: 0px;
+  }
+}
+@media (max-width: 380px) {
+  .navbar1 .logo a{
+    font-size: 27px;
+  }
+}
+
+/* landing page */
+
+#Home{
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+#Home .text{
+  font-size: 30px;
+  font-weight: normal;
+}
+
+#Home .text p{
+  color: white;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+#Home .text .typed-text{
+  color:#48dbfb;
+}
+
+ #Home .text p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+#Home .text p span.cursor.typing {
+  animation: none;
+}
+
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+#Home .icons{
+  text-align: center;
+  font-size: 20px;
+}
+
+#Home .icons a{
+  padding: 6px 10px 6px 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border:1.5px solid #48dbfb;
+  color: #48dbfb;
+  margin: 6px;
+  margin-top: 10px;
+}
+
+#Home .icons a:hover{
+  background-color:#48dbfb;
+  color:black;
+  font-weight: bold;
+}
+
+
+/*About page css */
+
+#About{
+  padding-top: 70px;
+  background:#d8f1ef;
+ padding-bottom: 40px;
+}
+
+#About .title{
+  position: relative;
+  padding-bottom: 60px;
+  color: black;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+#About .pic{
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  border: 4px solid #444;
+  display: block;
+  margin: auto;
+}
+
+ #About .info{
+  padding-top: 15px;
+}
+
+#About .info h3{
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#About .info p{
+  color: black;
+  text-align: center;
+  font-size: 17px;
+  text-align: justify;
+}
+
+#About .info .btn1{
+  margin-top: 5px;
+  margin: 4px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  background:transparent;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  transition: .3s linear;
+  color: black;
+  border:1px solid black;
+  outline: none;
+}
+
+#About .info .btn1:hover{
+  color:black;
+  background:#48dbfb;
+  border:1px solid #48dbfb;
+  outline: none;
+}
+
+
+/*skills page css*/
+
+#skills{
+    background-color: #2a2b2d;
+}
+
+.container3{
+  padding-top: 70px;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.container3 .title{
+  margin-bottom: 60px;
+  position: relative;
+  color: white;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+.ski{
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.skill{
+  width: calc(50% - 20px);
+  margin: 15px 0;
+}
+
+
+.skill-info{
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.skill-bar{
+  height: 3px;
+  background-color: #DDD;
+  margin-top: 14px;
+  position: relative;
+}
+
+.skill-bar::after{
+  content: '';
+  position: absolute;
+  height: 6px;
+  background-color:#48dbfb;
+  bottom: 0;
+}
+
+.html::after{
+  width: 90%;
+}
+
+.css::after{
+  width: 90%;
+}
+
+.javascript::after{
+  width: 70%;
+}
+
+.bootstrap::after{
+  width: 80%;
+}
+
+.nodejs::after{
+  width: 50%;
+}
+
+.c::after{
+  width: 55%;
+}
+
+.python::after{
+  width: 80%;
+}
+
+.photoshop::after{
+  width: 30%;
+}
+
+#Projects{
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+
+
+.container4 .title{
+   margin-bottom: 60px;
+  position: relative;
+  color: black;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.card-img-top{
+  border-radius: 10px;
+  width: 100%;
+  height: 200px;
+}
+
+.centered a{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #e37979;
+  color: white;
+  text-decoration: none;
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.centered a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.overlay {
+  position: relative;
+  display: inline-block;
+  background: white;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.overlay > img {
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+.overlay::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: blue;
+  opacity: 0;
+  transition: .5s ease;
+  border-radius: 10px;
+}
+
+.overlay:hover::before {
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+/*contact*/
+
+#Contact{
+  background-color: #f1f1f1;
+  background-size: cover;
+}
+
+#Contact  .title{
+  padding-top: 60px;
+  margin-bottom: 60px;
+  color: black;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+  text-align: center; 
+}
+
+.container4{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+.contact-info{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+.contact-info .itam{
+  width: 225px;
+  height: 160px;
+  background-color: #353b48;
+  color: white;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: .3s linear;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-info i{
+  display: block;
+  font-size: 40px;
+  line-height: 120px;
+  height: 100px;
+}
+
+.contact-info .itam:hover{
+  background-color: #48dbfb;
+}
+
+.contact-form{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+.contact-form input, .contact-form textarea{
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  background: #353b48;
+  border: none;
+  outline: none;
+  padding: 20px;
+  border-radius: 4px;
+  color: white;
+}
+
+.nameZone,.emailZone{
+  max-width: calc(50% - 10px);
+}
+.messagezone{
+  min-height: 200px;
+  resize: vertical;
+}
+
+.contact-form .btn3{
+  width: 180px;
+  background: transparent;
+  font-size: 16px;
+  color:black;
+  border:1px solid black;
+  padding: 0px;
+  margin-left: auto;
+  cursor: pointer;
+  transition: .3s linear; 
+  margin-bottom: 60px;
+}
+
+.contact-form .btn3:hover{
+    color:black;
+    background:#48dbfb;
+    border:1px solid #48dbfb;
+}
+
+/* footer line */
+
+footer{
+   background-color: #48dbfb;
+}
+
+footer .copyright-text{
+  padding-top: 13px;
+  text-align: center;
+  color: black;
+  padding-bottom: 13px;
+}
+
+    
+  </style>
+</head>
+<body>
+   
+   <!-- navbar start-->
+
+  <nav class="navbar1">
+    <div class="content">
+      <div class="logo">
+        <a href="#">NITIN</a>
+      </div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#Home"  onclick="revrse()">Home</a></li>
+        <li><a href="#About" onclick="revrse()">About</a></li>
+        <li><a href="#skills" onclick="revrse()">Skills</a></li>
+        <li><a href="#Projects" onclick="revrse()">Projects</a></li>
+        <li><a href="#Contact" onclick="revrse()">Contact</a></li>
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- navbar End-->
+
+  <!-- Landing page start-->
+
+    <section id="Home" class="banner">
+        <div class="content">
+       <div class="text d-block">
+                <p>Hi I'm <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+             </div>
+
+             <div class="icons d-block">
+      <a href="https://www.facebook.com/nitin.sain.37669528"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/sain_nitin200/"><i class="fab fa-instagram"></i></a>
+      <a href="https://mobile.twitter.com/NitinSa77952261"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Nitin326"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/nitin-sain-34a4671b2"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+  </section>
+
+    <!-- Landing page end-->
+  
+   <!--About page start -->
+
+     <section id="About">
+         <h1 class="title">About me</h1>
+           <div class="row col-lg-12">
+        
+              <div class="col-12 col-lg-5  col-md-6 my-3 mx-auto ">
+            <img src="http://i.xp.io/1dFUwtLq.jpg" alt="profile" class="pic" >
+              </div>
+
+              <div class="col-11 col-lg-5 col-md-6  my-1 mx-auto info"> 
+          <h3> I'm Nitin Sain</h3>
+          <p> I am undergraduate student of Electrical Engineering at Rajasthan Technical University, Kota. I love Programing and Robotics. I look forward to learning new skills in programing and Robotics. I keep making simple projects whenever i found free time. It always help me improve my skills. I also fond of photo editing and playing table tennis. </p>
+            <button class="btn1"> Downlod CV</button>
+            <button class="btn1"> Contact Me</button>
+               </div>
+
+            </div>
+    </section>
+
+    <!-- about page end-->
+
+    <!-- slills page start-->
+
+   
+  
+  <div id="skills">
+  <div class="container3">
+  <h1 class="title">Skills</h1>
+  <div class="ski">
+
+    <div class="row   col-md-12  my-1">
+       <div class="skill col-12 col-md-6 my-2">
+        <div class="skill-info">
+        <span>HTML</span>
+        <span>90%</span>
+        </div>
+        <div class="skill-bar html"></div>
+      </div>
+    
+
+    <div class="skill  col-12 col-md-6 my-2">
+        <div class="skill-info">
+        <span>CSS</span>
+        <span>90%</span>
+        </div>
+        <div class="skill-bar css"></div>
+      </div>
+    </div>
+
+<div class="row col-md-12 my-1">
+
+    <div class="skill col-12 col-md-6  my-2">
+      <div class="skill-info">
+        <span>JAVASCRIPT</span>
+        <span>70%</span>
+      </div>
+        <div class="skill-bar javascript"></div>
+      </div>
+  
+
+    <div class="skill col-12  col-md-6 my-2">
+      <div class="skill-info">
+        <span>BOOTSTRAP</span>
+        <span>80%</span>
+      </div>
+        <div class="skill-bar bootstrap"></div>
+      </div>
+</div>
+
+<div class="row  col-md-12 my-1">
+
+    <div class="skill col-12 col-md-6 my-2">
+      <div class="skill-info">
+        <span>NODE.JS</span>
+        <span>50%</span>
+      </div>
+        <div class="skill-bar nodejs"></div>
+      </div>
+    
+
+    <div class="skill col-12  col-md-6 my-2">
+      <div class="skill-info">
+        <span>C</span>
+        <span>55%</span>
+      </div>
+        <div class="skill-bar c"></div>
+      </div>
+</div>      
+    
+<div class="row col-md-12 my-1">
+
+    <div class="skill col-12 col-md-6 my-2">
+      <div class="skill-info">
+        <span>PYTHON</span>
+        <span>80%</span>
+      </div>
+        <div class="skill-bar python"></div>
+      </div>
+    
+
+    <div class="skill col-12 col-md-6 my-2">
+      <div class="skill-info">
+        <span>PHOTOSHOP</span>
+        <span>30%</span>
+      </div>
+        <div class="skill-bar photoshop"></div>
+      </div> 
+</div>
+
+
+  </div>
+   </div>
+</div>
+
+      <!-- slills page end-->
+
+
+      <!-- project section start -->
+
+    <div id="Projects">
+     <div class="container4">
+         <h1 class="title"> My Projects</h1>
+       
+       <div class="row mx-auto col-lg-12">
+         
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4" >
+            <span class="overlay">
+             <img class="card-img-top" src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
+             <div class="centered"><a href="">Food Website</a></div>
+             </span>
+         </div>
+
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+            <span class="overlay">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1553406624-739b610cf5c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
+            <div class="centered"><a href="">Drumpad</a></div>
+            </span>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+            <span class="overlay">
+            <img class="card-img-top" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Card image cap">    
+            <div class="centered"><a href="">Music Player</a></div>
+            </span>
+         </div>
+
+         <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+             <span class="overlay">
+             <img class="card-img-top" src="http://keshavagrawal.me/about2/teacher3.jpg" alt="Card image cap">
+             <div class="centered"><a href= ""> Centered</a></div>
+             </span>
+         </div>
+
+         <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+              <span class="overlay">
+              <img class="card-img-top" src="http://keshavagrawal.me/about2/teacher3.jpg" alt="Card image cap">
+              <div class="centered"><a href= ""> Centered</a></div>
+              </span>
+         </div>
+
+         <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+               <span class="overlay">
+               <img class="card-img-top" src="http://keshavagrawal.me/about2/teacher3.jpg" alt="Card image cap">
+               <div class="centered"><a href= ""> Centered</a></div>
+               </span>
+         </div>
+        
+        </div>
+      </div>
+    </div>
+
+         <!-- project section End -->
+
+         <!-- contact section start-->
+
+      <div id="Contact">
+   <h1 class="title">Get in touch</h1>
+   <div class="container4">
+   <div class="contact-info">
+
+    <div class="row col-lg-12 mx-auto">
+      <div class="col-lg-4 col-md-4 col-sm-9 mx-auto  pb-4">
+    <div class="itam mx-auto">
+      <i class="fas fa-phone"></i>
+       +8505053375
+    </div>
+  </div>
+
+     <div class="col-lg-4 col-md-4 col-sm-9 mx-auto  pb-4">
+    <div class="itam mx-auto">
+      <i class="fas fa-envelope"></i>
+        @nitin332709@gmail.com
+    </div>
+  </div>
+
+   <div class="col-lg-4 col-md-4 col-sm-9 mx-auto pb-3">
+    <div class="itam mx-auto">
+      <i class="fas fa-map-marker-alt"></i>
+        Sikar, Rajasthan,India
+     </div>
+  </div>
+
+</div>
+</div>
+    <form action="#" class="contact-form">
+    <input type="text" class="nameZone" placeholder="Your Full Name">
+    <input type="email" class="emailZone" placeholder="Your Gmail">
+    <input type="text" class="subjectzone" placeholder="Subject">
+    <textarea class="messagezone" placeholder="Message"></textarea>
+    <input type="submit" value="send Message" class="btn3">
+</form>
+</div>
+</div>
+
+          <!-- contact section End-->
+
+<footer>
+    <div class="copyright-text">
+    &copy;2020 | all rights reserved, nitin sain
+  </div>
+</footer>
+
+
+ 
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar1");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      navbar.classList.add("show");
+      menuBtn.classList.add("hide");
+      body.classList.add("disabled");
+    }
+    cancelBtn.onclick = ()=>{
+      body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+    }
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+     
+     function revrse() {
+     	body.classList.remove("disabled");
+      navbar.classList.remove("show");
+      menuBtn.classList.remove("hide");
+     	
+     }
+    
+
+    /*tooggle */
+
+function toggle() {
+  var header = document.getElementById("header")
+  header.classList.toggle('open')
+      }
+
+/*typing effect */
+
+const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Nitin.", "A Developer.", "A Designer."];
+const typingDelay = 150;
+const erasingDelay = 100;
+const newTextDelay = 1000; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } 
+  else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if(textArrayIndex>=textArray.length) textArrayIndex=0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+  if(textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+
+  </script>
+
+</body>
+</html>
