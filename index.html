@@ -12,12 +12,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&family=Monoton&family=Roboto:wght@700&display=swap" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="aos.css">
 <link  href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap">
- <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-	<script src="aos.js"></script>
-	
 	<style>
+		
 		
 *{
   margin: 0;
@@ -59,7 +56,7 @@ html{
   transition: all 0.3s ease;
 }
 .navbar1.sticky{
-  background: #1b1b1b;
+  background:rgb(255,255,255,1);
   padding: 10px 0;
   box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.1);
 }
@@ -69,7 +66,7 @@ html{
   justify-content: space-between;
 }
 .navbar1 .logo a{
-  color: #fff;
+  color: black;
   font-size: 30px;
   text-decoration: none;
   font-family: 'Monoton', cursive;
@@ -82,7 +79,7 @@ html{
   list-style: none;
 }
 .menu-list li a{
-  color: #fff;
+  color: black;
   font-size: 18px;
   font-weight: 500;
   margin-left: 25px;
@@ -90,10 +87,10 @@ html{
   transition: all 0.3s ease;
 }
 .menu-list li a:hover{
-  color:#48dbfb ;
+  font-weight: bold;
 }
 .banner{
-  background: url("https://wallpapercave.com/wp/OryYmio.jpg") no-repeat;
+  background: url("https://c4.wallpaperflare.com/wallpaper/455/346/398/macro-blur-keyboard-laptop-wallpaper-preview.jpg") no-repeat;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -118,6 +115,7 @@ html{
 }
 .menu-list .cancel-btn{
   position: absolute;
+  color: black;
   right: 30px;
   top: 20px;
 }
@@ -142,6 +140,7 @@ html{
   }
   .icon{
     display: block;
+    color: black;
   }
   .icon.hide{
     display: none;
@@ -150,13 +149,13 @@ html{
     position: fixed;
     height: 100vh;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     left: -100%;
     top: 0px;
     display: block;
     padding: 40px 0;
     text-align: center;
-    background: #222;
+    background: white;
     transition: all 0.3s ease;
   }
   .navbar1.show .menu-list{
@@ -167,8 +166,12 @@ html{
   }
   .navbar1 .menu-list li a{
     font-size: 23px;
+    color:  #03abd0;
     margin-left: -100%;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .navbar1 .menu-list li a:hover{
+    color: black;
   }
   .navbar1.show .menu-list li a{
     margin-left: 0px;
@@ -197,7 +200,7 @@ html{
 }
 
 #Home .text p{
-  color: white;
+  color:#317a98;
   letter-spacing: 0.1rem;
   text-align: center;
   overflow: hidden;
@@ -205,12 +208,12 @@ html{
 }
 
 #Home .text .typed-text{
-  color:#48dbfb;
+  color:black;
 }
 
  #Home .text p span.cursor {
   display: inline-block;
-  background-color: #ccc;
+  background-color: black;
   margin-left: 0.1rem;
   width: 3px;
   animation: blink 1s infinite;
@@ -234,18 +237,18 @@ html{
 }
 
 #Home .icons a{
-  padding: 6px 10px 6px 10px;
-  border-radius: 50%;
   background-color: transparent;
-  border:1.5px solid #48dbfb;
-  color: #48dbfb;
+  border:1.5px solid black;
+  color: black;
   margin: 6px;
+  padding: 5px 7px;
+  border-radius: 50%;
   margin-top: 10px;
 }
 
 #Home .icons a:hover{
-  background-color:#48dbfb;
-  color:black;
+  background-color:black;
+  color:#48dbfb;
   font-weight: bold;
 }
 
@@ -254,7 +257,7 @@ html{
 
 #About{
   padding-top: 70px;
-  background:#d8f1ef;
+  background:white;
  padding-bottom: 40px;
 }
 
@@ -326,7 +329,7 @@ html{
 /*skills page css*/
 
 #skills{
-    background-color: #2a2b2d;
+    background-color:#9ffcff;
 }
 
 .container3{
@@ -338,7 +341,7 @@ html{
 .container3 .title{
   margin-bottom: 60px;
   position: relative;
-  color: white;
+  color: black;
   font-size: 30px;
   font-family: 'Roboto', sans-serif;
   text-decoration: underline;
@@ -364,12 +367,12 @@ html{
 .skill-info{
   display: flex;
   justify-content: space-between;
-  color: white;
+  color: black;
 }
 
 .skill-bar{
   height: 3px;
-  background-color: #DDD;
+  background-color: #48dbfb;
   margin-top: 14px;
   position: relative;
 }
@@ -378,7 +381,7 @@ html{
   content: '';
   position: absolute;
   height: 6px;
-  background-color:#48dbfb;
+  background-color:black;
   bottom: 0;
 }
 
@@ -395,11 +398,11 @@ html{
 }
 
 .bootstrap::after{
-  width: 80%;
+  width: 90%;
 }
 
 .nodejs::after{
-  width: 50%;
+  width: 70%;
 }
 
 .c::after{
@@ -417,6 +420,7 @@ html{
 #Projects{
   padding-top: 70px;
   padding-bottom: 40px;
+  background:#f8fcfc;
 }
 
 
@@ -443,16 +447,15 @@ html{
   transform: translate(-50%, -50%);
   font-size: 20px;
   font-weight: bold;
-  background-color: #e37979;
+  background-color: transparent;
   color: white;
-  font-size: 16px;
   text-decoration: none;
-  padding: 5px 9px;
-  border-radius: 5px;
+  text-align: center;
 }
 
 .centered a:hover{
   color: white;
+  background: transparent;
   text-decoration: none;
 }
 
@@ -540,52 +543,6 @@ html{
   background-color: #48dbfb;
 }
 
-.contact-form{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-
-.contact-form input, .contact-form textarea{
-  width: 100%;
-  height: 50px;
-  margin: 10px 0;
-  background: #353b48;
-  border: none;
-  outline: none;
-  padding: 20px;
-  border-radius: 4px;
-  color: white;
-}
-
-.nameZone,.emailZone{
-  max-width: calc(50% - 10px);
-}
-.messagezone{
-  min-height: 200px;
-  resize: vertical;
-}
-
-.contact-form .btn3{
-  width: 180px;
-  background: transparent;
-  font-size: 16px;
-  color:black;
-  border:1px solid black;
-  padding: 0px;
-  margin-left: auto;
-  cursor: pointer;
-  transition: .3s linear; 
-  margin-bottom: 60px;
-}
-
-.contact-form .btn3:hover{
-    color:black;
-    background:#48dbfb;
-    border:1px solid #48dbfb;
-}
-
 /* footer line */
 
 footer{
@@ -645,6 +602,8 @@ footer .copyright-text{
   75% { height: 100%;}
   100% { height: 0%;}
 }
+		
+		
 	</style>
 </head>
 <body>
@@ -690,11 +649,11 @@ footer .copyright-text{
              </div>
 
              <div class="icons d-block">
-      <a href="https://www.facebook.com/nitin.sain.37669528"><i class="fab fa-facebook"></i></a>
-      <a href="https://www.instagram.com/sain_nitin200/"><i class="fab fa-instagram"></i></a>
-      <a href="https://mobile.twitter.com/NitinSa77952261"><i class="fab fa-twitter"></i></a>
-      <a href="https://github.com/Nitin326"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/nitin-sain-34a4671b2"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/nitin.sain.37669528" target="_blank" ><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/sain_nitin200/" target="_blank" ><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/NitinSa36318959" target="_blank" ><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/Nitin326"><i class="fab fa-github" target="_blank" ></i></a>
+      <a href="https://www.linkedin.com/in/nitin-sain-34a4671b2" target="_blank" ><i class="fab fa-linkedin"></i></a>
         </div>
     </div>
   </section>
@@ -707,15 +666,15 @@ footer .copyright-text{
          <h1 class="title">About me</h1>
            <div class="row col-lg-12">
         
-              <div data-aos="fade-right" class="col-12 col-lg-5  col-md-6 my-3 mx-auto " >
+              <div class="col-12 col-lg-5  col-md-6 my-3 mx-auto " >
             <img src="http://i.xp.io/1dFUwtLq.jpg" alt="profile" class="pic" >
               </div>
 
-              <div data-aos="fade-left" class="col-11 col-lg-5 col-md-6  my-1 mx-auto info"> 
+              <div class="col-11 col-lg-5 col-md-6  my-1 mx-auto info"> 
           <h3> I'm Nitin Sain</h3>
           <p> I am undergraduate student of Electrical Engineering at Rajasthan Technical University, Kota. I love Programing and Robotics. I look forward to learning new skills in programing and Robotics. I keep making simple projects whenever i found free time. It always help me improve my skills. I also fond of photo editing and playing table tennis. </p>
             <button class="btn1"> Downlod CV</button>
-            <button class="btn1"> Contact Me</button>
+            <a href="#Contact"><button class="btn1"> Contact Me</button></a> 
                </div>
 
             </div>
@@ -765,7 +724,7 @@ footer .copyright-text{
     <div class="skill col-12  col-md-6 my-2">
       <div class="skill-info">
         <span>BOOTSTRAP</span>
-        <span>80%</span>
+        <span>90%</span>
       </div>
         <div class="skill-bar bootstrap"></div>
       </div>
@@ -776,7 +735,7 @@ footer .copyright-text{
     <div class="skill col-12 col-md-6 my-2">
       <div class="skill-info">
         <span>NODE.JS</span>
-        <span>50%</span>
+        <span>70%</span>
       </div>
         <div class="skill-bar nodejs"></div>
       </div>
@@ -827,45 +786,45 @@ footer .copyright-text{
        
        <div class="row mx-auto col-lg-12">
          
-        <div   data-aos="zoom-in-up" class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4" >
+        <div  class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4" >
             <span class="overlay">
              <img class="card-img-top" src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
              <div class="centered"><a href="">Food Web</a></div>
              </span>
          </div>
 
-       <div  data-aos="zoom-in-up"  class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+       <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
             <span class="overlay">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1553406624-739b610cf5c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
             <div class="centered"><a href="">Drumpad</a></div>
             </span>
         </div>
 
-        <div   data-aos="zoom-in-up" class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
             <span class="overlay">
             <img class="card-img-top" src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" alt="Card image cap">    
             <div class="centered"><a href="">Music Player</a></div>
             </span>
          </div>
 
-         <div  data-aos="zoom-in-up"  class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+         <div  class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
              <span class="overlay">
-             <img class="card-img-top" src="http://keshavagrawal.me/about2/teacher3.jpg" alt="Card image cap">
-             <div class="centered"><a href= ""> Centered</a></div>
+             <img class="card-img-top" src="https://images.unsplash.com/photo-1587539405967-b13e59b1fdc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="Card image cap">
+             <div class="centered"><a href= "">Chat App</a></div>
              </span>
          </div>
 
-         <div   data-aos="zoom-in-up" class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+         <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
               <span class="overlay">
-              <img class="card-img-top" src="http://keshavagrawal.me/about2/teacher3.jpg" alt="Card image cap">
-              <div class="centered"><a href= ""> Centered</a></div>
+              <img class="card-img-top" src="https://images.pexels.com/photos/1162251/pexels-photo-1162251.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Card image cap">
+              <div class="centered"><a href= ""> Weather App</a></div>
               </span>
          </div>
 
-         <div  data-aos="zoom-in-up"  class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
+         <div class="col-lg-4 col-md-4 col-sm-6 col-12 pb-4">
                <span class="overlay">
-               <img class="card-img-top" src="http://keshavagrawal.me/about2/teacher3.jpg" alt="Card image cap">
-               <div class="centered"><a href= ""> Centered</a></div>
+               <img class="card-img-top" src="https://www.dataquest.io/wp-content/uploads/2019/07/learn-python-tutorials-1024x576.jpg" alt="Card image cap">
+               <div class="centered"><a href= "">Snake Game</a></div>
                </span>
          </div>
         
@@ -882,7 +841,7 @@ footer .copyright-text{
    <div class="container4">
    <div class="contact-info">
 
-    <div  data-aos="zoom-in-up" class="row col-lg-12 mx-auto">
+    <div  class="row col-lg-12 mx-auto">
       <div class="col-lg-4 col-md-4 col-sm-9 mx-auto  pb-4">
     <div class="itam mx-auto">
       <i class="fas fa-phone"></i>
@@ -890,14 +849,14 @@ footer .copyright-text{
     </div>
   </div>
 
-     <div  data-aos="zoom-in-up" class="col-lg-4 col-md-4 col-sm-9 mx-auto  pb-4">
+     <div  class="col-lg-4 col-md-4 col-sm-9 mx-auto  pb-4">
     <div class="itam mx-auto">
       <i class="fas fa-envelope"></i>
         @nitin332709@gmail.com
     </div>
   </div>
 
-   <div  data-aos="zoom-in-up" class="col-lg-4 col-md-4 col-sm-9 mx-auto pb-3">
+   <div class="col-lg-4 col-md-4 col-sm-9 mx-auto pb-3">
     <div class="itam mx-auto">
       <i class="fas fa-map-marker-alt"></i>
         Sikar, Rajasthan,India
@@ -906,13 +865,7 @@ footer .copyright-text{
 
 </div>
 </div>
-    <form action="#" class="contact-form">
-    <input type="text" class="nameZone" placeholder="Your Name">
-    <input type="email" class="emailZone" placeholder="Your Gmail">
-    <input type="text" class="subjectzone" placeholder="Subject">
-    <textarea class="messagezone" placeholder="Message"></textarea>
-    <input type="submit" value="send Message" class="btn3">
-</form>
+  
 </div>
 </div>
 
@@ -1011,11 +964,7 @@ document.addEventListener("DOMContentLoaded", function() { // On DOM Load initia
           $(".loader-wrapper").fadeOut("slow");
         });
 
-   AOS.init({
-    	offset:200,
-    	duration: 1000,
-    });
-
+ 
   </script>
 
 </body>
